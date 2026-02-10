@@ -9,8 +9,12 @@ on:
 jobs:
   generate:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -22,10 +26,13 @@ jobs:
           cd repo/plugin.video.DaveyClan
           python _repo_generator.py
       
-      - name: Commit changes
+      - name: Configure Git
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+      
+      - name: Commit and push changes
+        run: |
           git add -A
-          git commit -m "Auto-generate repository files" || true
+          git commit -m "Auto-generate repository files" || echo "No changes to commit"
           git push
