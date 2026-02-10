@@ -23,7 +23,7 @@ jobs:
       
       - name: Run repo generator
         run: |
-          cd repo/plugin.video.DaveyClan
+          cd repo/
           python _repo_generator.py
       
       - name: Configure Git
