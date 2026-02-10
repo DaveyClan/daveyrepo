@@ -3,7 +3,7 @@
     <extension point="xbmc.addon.repository" name="Davey-clan.github.io">
         <dir>
             <info compressed="false">https://raw.githubusercontent.com/DaveyClan/Davey-clan.github.io/main/repo/zips/addons.xml</info>
-            <checksum>https://raw.githubusercontent.comDaveyClan/Davey-clan.github.io/main/repo/zips/addons.xml.md5</checksum>
+            <checksum>https://raw.githubusercontent.com/DaveyClan/Davey-clan.github.io/main/repo/zips/addons.xml.md5</checksum>
             <datadir zip="true">https://raw.githubusercontent.com/DaveyClan/Davey-clan.github.io/main/repo/zips/</datadir>
         </dir>
     </extension>
